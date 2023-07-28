@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32602.291
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6298A5D4-2113-49FC-823A-F7CCDF58980B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{5C3946C9-E156-4A29-BFE3-589696DFB436}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{320EFBB4-39DC-4A10-9C6D-61200E88C352}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BEDFC021-3A48-4CB9-BCB0-ECA8348BE1FD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notes.Domain", "Notes.Domain\Notes.Domain.csproj", "{0FC7DC46-7113-42D6-AECF-B4E6F5E9EE87}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notes.Application", "Notes.Application\Notes.Application.csproj", "{B5522450-5AF7-4FB9-89B6-0AF38CE27CCA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notes.Persistence", "Notes.Persistence\Notes.Persistence.csproj", "{918F81B4-337B-46CB-A08A-47CEE89451F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Notes.WebApi", "Notes.WebApi\Notes.WebApi.csproj", "{DE22372E-4C46-4701-957B-2699A7B2678E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes.Tests", "Notes.Tests\Notes.Tests.csproj", "{CC951DF5-B20A-44A2-B905-BA18C1C1912D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FC7DC46-7113-42D6-AECF-B4E6F5E9EE87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FC7DC46-7113-42D6-AECF-B4E6F5E9EE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FC7DC46-7113-42D6-AECF-B4E6F5E9EE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FC7DC46-7113-42D6-AECF-B4E6F5E9EE87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5522450-5AF7-4FB9-89B6-0AF38CE27CCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5522450-5AF7-4FB9-89B6-0AF38CE27CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5522450-5AF7-4FB9-89B6-0AF38CE27CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5522450-5AF7-4FB9-89B6-0AF38CE27CCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{918F81B4-337B-46CB-A08A-47CEE89451F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{918F81B4-337B-46CB-A08A-47CEE89451F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{918F81B4-337B-46CB-A08A-47CEE89451F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{918F81B4-337B-46CB-A08A-47CEE89451F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE22372E-4C46-4701-957B-2699A7B2678E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE22372E-4C46-4701-957B-2699A7B2678E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE22372E-4C46-4701-957B-2699A7B2678E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE22372E-4C46-4701-957B-2699A7B2678E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC951DF5-B20A-44A2-B905-BA18C1C1912D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC951DF5-B20A-44A2-B905-BA18C1C1912D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC951DF5-B20A-44A2-B905-BA18C1C1912D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC951DF5-B20A-44A2-B905-BA18C1C1912D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0FC7DC46-7113-42D6-AECF-B4E6F5E9EE87} = {6298A5D4-2113-49FC-823A-F7CCDF58980B}
+		{B5522450-5AF7-4FB9-89B6-0AF38CE27CCA} = {6298A5D4-2113-49FC-823A-F7CCDF58980B}
+		{918F81B4-337B-46CB-A08A-47CEE89451F1} = {5C3946C9-E156-4A29-BFE3-589696DFB436}
+		{DE22372E-4C46-4701-957B-2699A7B2678E} = {320EFBB4-39DC-4A10-9C6D-61200E88C352}
+		{CC951DF5-B20A-44A2-B905-BA18C1C1912D} = {BEDFC021-3A48-4CB9-BCB0-ECA8348BE1FD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABCCCEA1-B37D-4040-AC13-86AF9743D5F1}
+	EndGlobalSection
+EndGlobal

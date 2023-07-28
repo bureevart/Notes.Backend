@@ -1,0 +1,570 @@
+2023-07-25 13:35:34.302 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 13:35:35.077 +05:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-07-25 13:35:35.339 +05:00 [INF] User profile is available. Using 'C:\Users\Bureev Artem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-25 13:35:36.402 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-25 13:35:36.402 +05:00 [INF] Hosting environment: Development
+2023-07-25 13:35:36.402 +05:00 [INF] Content root path: C:\Users\Bureev Artem\source\repos\Notes.Backend\Notes.WebApi
+2023-07-25 13:35:36.523 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/index.html - -
+2023-07-25 13:35:37.326 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/index.html - - - 200 - text/html;charset=utf-8 258.8514ms
+2023-07-25 13:35:38.654 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - -
+2023-07-25 13:35:39.137 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 482.8711ms
+2023-07-25 13:35:48.450 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:35:48.450 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:35:48.512 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:35:48.512 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:35:48.515 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 65.6113ms
+2023-07-25 13:35:48.516 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 66.5551ms
+2023-07-25 13:35:48.523 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:35:48.530 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:35:49.537 +05:00 [INF] Successfully validated the token.
+2023-07-25 13:35:49.547 +05:00 [INF] Authorization was successful.
+2023-07-25 13:35:49.548 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 13:35:49.591 +05:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 13:35:49.889 +05:00 [INF] Notes Request: GetNoteListQuery "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","$type":"GetNoteListQuery"}
+2023-07-25 13:35:49.921 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 13:35:50.361 +05:00 [INF] Executed DbCommand (14ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-07-25 13:35:50.390 +05:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-07-25 13:35:50.418 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:35:50.419 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:35:50.420 +05:00 [INF] Successfully validated the token.
+2023-07-25 13:35:50.421 +05:00 [INF] Authorization was successful.
+2023-07-25 13:35:50.421 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 13:35:50.422 +05:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 13:35:50.422 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 823.2606ms
+2023-07-25 13:35:50.423 +05:00 [INF] Notes Request: GetNoteListQuery "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","$type":"GetNoteListQuery"}
+2023-07-25 13:35:50.423 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 13:35:50.429 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 200 - application/json;+charset=utf-8 1905.8010ms
+2023-07-25 13:35:50.535 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 13:35:50.547 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-07-25 13:35:50.551 +05:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-07-25 13:35:50.553 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 131.2721ms
+2023-07-25 13:35:50.553 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 13:35:50.555 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 200 - application/json;+charset=utf-8 136.8535ms
+2023-07-25 13:35:57.466 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:35:57.466 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:35:57.467 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 1.2958ms
+2023-07-25 13:35:57.475 +05:00 [INF] Request starting HTTP/2 POST https://localhost:44307/api/1.0/Note application/json 15
+2023-07-25 13:35:57.476 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:35:57.479 +05:00 [INF] Successfully validated the token.
+2023-07-25 13:35:57.480 +05:00 [INF] Authorization was successful.
+2023-07-25 13:35:57.481 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-07-25 13:35:57.497 +05:00 [INF] Route matched with {action = "Create", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Notes.WebApi.Models.CreateNoteDto) on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 13:35:57.575 +05:00 [INF] Notes Request: CreateNoteCommand "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","Title":"asd","Details":null,"$type":"CreateNoteCommand"}
+2023-07-25 13:35:57.580 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 13:35:57.823 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?' (Size = 3), @p5='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Notes" ("Id", "CreationDate", "Details", "EditDate", "Title", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2023-07-25 13:35:57.868 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2023-07-25 13:35:57.869 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi) in 372.2912ms
+2023-07-25 13:35:57.870 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.Create (Notes.WebApi)'
+2023-07-25 13:35:57.870 +05:00 [INF] Request finished HTTP/2 POST https://localhost:44307/api/1.0/Note application/json 15 - 200 - application/json;+charset=utf-8 394.7165ms
+2023-07-25 13:35:59.477 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:35:59.478 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:35:59.479 +05:00 [INF] Successfully validated the token.
+2023-07-25 13:35:59.479 +05:00 [INF] Authorization was successful.
+2023-07-25 13:35:59.479 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 13:35:59.479 +05:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 13:35:59.481 +05:00 [INF] Notes Request: GetNoteListQuery "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","$type":"GetNoteListQuery"}
+2023-07-25 13:35:59.483 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 13:35:59.487 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-07-25 13:35:59.490 +05:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-07-25 13:35:59.493 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 13.7816ms
+2023-07-25 13:35:59.493 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 13:35:59.494 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 200 - application/json;+charset=utf-8 17.0185ms
+2023-07-25 13:54:28.774 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 13:54:29.299 +05:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-07-25 13:54:29.458 +05:00 [INF] User profile is available. Using 'C:\Users\Bureev Artem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-25 13:54:30.738 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-25 13:54:30.738 +05:00 [INF] Hosting environment: Development
+2023-07-25 13:54:30.739 +05:00 [INF] Content root path: C:\Users\Bureev Artem\source\repos\Notes.Backend\Notes.WebApi
+2023-07-25 13:54:30.873 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:54:30.873 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/index.html - -
+2023-07-25 13:54:30.873 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:54:31.022 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:54:31.022 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:54:31.083 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 199.4058ms
+2023-07-25 13:54:31.083 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 197.4162ms
+2023-07-25 13:54:31.102 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:54:31.129 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:54:31.323 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/index.html - - - 200 - text/html;charset=utf-8 444.0346ms
+2023-07-25 13:54:31.512 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 13:54:31.526 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 13:54:31.529 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 427.3845ms
+2023-07-25 13:54:31.533 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:54:31.534 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:54:31.540 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 13:54:31.540 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 13:54:31.543 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 10.6658ms
+2023-07-25 13:54:31.976 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - -
+2023-07-25 13:54:32.268 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 291.9155ms
+2023-07-25 13:57:00.603 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:57:00.603 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:57:00.605 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:57:00.603 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:57:00.609 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 6.5813ms
+2023-07-25 13:57:00.609 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 6.5920ms
+2023-07-25 13:57:00.620 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:57:00.620 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:57:01.678 +05:00 [INF] Successfully validated the token.
+2023-07-25 13:57:01.682 +05:00 [INF] Authorization was successful.
+2023-07-25 13:57:01.682 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 13:57:01.749 +05:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 13:57:02.539 +05:00 [INF] Notes Request: GetNoteListQuery "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","$type":"GetNoteListQuery"}
+2023-07-25 13:57:02.607 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 13:57:03.770 +05:00 [INF] Executed DbCommand (62ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-07-25 13:57:03.803 +05:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-07-25 13:57:03.837 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:57:03.838 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:57:03.843 +05:00 [INF] Successfully validated the token.
+2023-07-25 13:57:03.844 +05:00 [INF] Authorization was successful.
+2023-07-25 13:57:03.844 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 13:57:03.845 +05:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 13:57:03.847 +05:00 [INF] Notes Request: GetNoteListQuery "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","$type":"GetNoteListQuery"}
+2023-07-25 13:57:03.849 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 2082.9383ms
+2023-07-25 13:57:03.850 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 13:57:03.855 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 200 - application/json;+charset=utf-8 3234.6904ms
+2023-07-25 13:57:03.948 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 13:57:03.983 +05:00 [INF] Executed DbCommand (16ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-07-25 13:57:03.996 +05:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-07-25 13:57:04.001 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 156.0653ms
+2023-07-25 13:57:04.001 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 13:57:04.005 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 200 - application/json;+charset=utf-8 168.3710ms
+2023-07-25 13:58:02.981 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:58:02.981 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:58:02.981 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:58:02.981 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:58:02.983 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 2.2208ms
+2023-07-25 13:58:02.983 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 2.7733ms
+2023-07-25 13:58:03.010 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:58:03.011 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:58:03.018 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 13:58:03.018 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 13:58:03.021 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 10.8406ms
+2023-07-25 13:58:03.061 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:58:03.061 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:58:03.062 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 13:58:03.062 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 13:58:03.070 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 9.0997ms
+2023-07-25 13:58:11.128 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:58:11.128 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:58:11.128 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:58:11.128 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:58:11.128 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 0.6269ms
+2023-07-25 13:58:11.128 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 0.7548ms
+2023-07-25 13:58:11.140 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:58:11.140 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:58:11.141 +05:00 [INF] Successfully validated the token.
+2023-07-25 13:58:11.141 +05:00 [INF] Authorization was successful.
+2023-07-25 13:58:11.141 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 13:58:11.141 +05:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 13:58:11.143 +05:00 [INF] Notes Request: GetNoteListQuery "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","$type":"GetNoteListQuery"}
+2023-07-25 13:58:11.146 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 13:58:11.154 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-07-25 13:58:11.161 +05:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-07-25 13:58:11.162 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 20.619ms
+2023-07-25 13:58:11.162 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 13:58:11.163 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 200 - application/json;+charset=utf-8 22.9196ms
+2023-07-25 13:58:11.174 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:58:11.174 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:58:11.175 +05:00 [INF] Successfully validated the token.
+2023-07-25 13:58:11.175 +05:00 [INF] Authorization was successful.
+2023-07-25 13:58:11.175 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 13:58:11.176 +05:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 13:58:11.176 +05:00 [INF] Notes Request: GetNoteListQuery "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","$type":"GetNoteListQuery"}
+2023-07-25 13:58:11.177 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 13:58:11.182 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-07-25 13:58:11.191 +05:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-07-25 13:58:11.193 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 17.0978ms
+2023-07-25 13:58:11.193 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 13:58:11.201 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 200 - application/json;+charset=utf-8 26.7148ms
+2023-07-25 13:58:20.736 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:58:20.737 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:58:20.737 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:58:20.737 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:58:20.737 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 0.6664ms
+2023-07-25 13:58:20.739 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 1.2123ms
+2023-07-25 13:58:20.746 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:58:20.747 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:58:20.747 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 13:58:20.747 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 13:58:20.757 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 10.6141ms
+2023-07-25 13:58:20.758 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 13:58:20.759 +05:00 [INF] CORS policy execution successful.
+2023-07-25 13:58:20.803 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 13:58:20.803 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 13:58:20.866 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 108.7484ms
+2023-07-25 14:00:39.713 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:00:39.715 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:00:39.732 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:00:39.732 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:00:39.732 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 0.5254ms
+2023-07-25 14:00:39.732 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 18.9958ms
+2023-07-25 14:00:39.821 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:00:39.821 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:00:39.821 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 14:00:39.822 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 14:00:39.965 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 144.5582ms
+2023-07-25 14:00:40.098 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:00:40.099 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:00:40.099 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 14:00:40.099 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 14:00:40.120 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 21.5817ms
+2023-07-25 14:01:41.849 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:01:41.861 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:01:41.862 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 13.6390ms
+2023-07-25 14:01:41.999 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:01:41.999 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:01:42.000 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 1.2414ms
+2023-07-25 14:01:42.136 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:01:42.137 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:01:42.137 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 14:01:42.137 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 14:01:42.145 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 8.8454ms
+2023-07-25 14:01:42.371 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:01:42.372 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:01:42.372 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 14:01:42.373 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 14:01:42.534 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 162.5784ms
+2023-07-25 14:01:42.644 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:01:42.644 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:01:42.644 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 14:01:42.645 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 14:01:42.663 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 19.0098ms
+2023-07-25 14:01:42.692 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:01:42.692 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:01:42.693 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 14:01:42.693 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 14:01:42.808 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 116.1694ms
+2023-07-25 14:04:14.480 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:04:14.481 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:04:14.482 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 1.3276ms
+2023-07-25 14:04:14.482 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:04:14.483 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:04:14.483 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 0.8563ms
+2023-07-25 14:04:14.501 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:04:14.502 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:04:14.503 +05:00 [INF] Successfully validated the token.
+2023-07-25 14:04:14.503 +05:00 [INF] Authorization was successful.
+2023-07-25 14:04:14.503 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 14:04:14.503 +05:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 14:04:14.503 +05:00 [INF] Notes Request: GetNoteListQuery "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","$type":"GetNoteListQuery"}
+2023-07-25 14:04:14.506 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 14:04:14.536 +05:00 [INF] Executed DbCommand (12ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-07-25 14:04:14.538 +05:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-07-25 14:04:14.539 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 35.448ms
+2023-07-25 14:04:14.539 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 14:04:14.540 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 200 - application/json;+charset=utf-8 38.7216ms
+2023-07-25 14:04:14.584 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:04:14.589 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:04:14.590 +05:00 [INF] Successfully validated the token.
+2023-07-25 14:04:14.591 +05:00 [INF] Authorization was successful.
+2023-07-25 14:04:14.591 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 14:04:14.591 +05:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 14:04:14.592 +05:00 [INF] Notes Request: GetNoteListQuery "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","$type":"GetNoteListQuery"}
+2023-07-25 14:04:14.593 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 14:04:14.604 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-07-25 14:04:14.605 +05:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-07-25 14:04:14.643 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 51.3003ms
+2023-07-25 14:04:14.645 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 14:04:14.659 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 200 - application/json;+charset=utf-8 74.7871ms
+2023-07-25 14:04:27.479 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:04:27.479 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:04:27.479 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:04:27.479 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:04:27.480 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 2.5287ms
+2023-07-25 14:04:27.480 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 2.1184ms
+2023-07-25 14:04:27.499 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:04:27.500 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:04:27.500 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 14:04:27.500 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 14:04:27.508 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 8.2277ms
+2023-07-25 14:04:27.573 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:04:27.574 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:04:27.574 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 14:04:27.574 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 14:04:27.610 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 35.7416ms
+2023-07-25 14:14:54.352 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:14:54.352 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:14:54.353 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:14:54.353 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:14:54.353 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 0.7459ms
+2023-07-25 14:14:54.353 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 0.7458ms
+2023-07-25 14:14:54.382 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:14:54.382 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:14:54.384 +05:00 [INF] Successfully validated the token.
+2023-07-25 14:14:54.384 +05:00 [INF] Authorization was successful.
+2023-07-25 14:14:54.384 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 14:14:54.384 +05:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 14:14:54.384 +05:00 [INF] Notes Request: GetNoteListQuery "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","$type":"GetNoteListQuery"}
+2023-07-25 14:14:54.388 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 14:14:54.400 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-07-25 14:14:54.402 +05:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-07-25 14:14:54.404 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 20.3213ms
+2023-07-25 14:14:54.405 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 14:14:54.406 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 200 - application/json;+charset=utf-8 24.0073ms
+2023-07-25 14:14:54.420 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:14:54.420 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:14:54.421 +05:00 [INF] Successfully validated the token.
+2023-07-25 14:14:54.421 +05:00 [INF] Authorization was successful.
+2023-07-25 14:14:54.421 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 14:14:54.422 +05:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 14:14:54.422 +05:00 [INF] Notes Request: GetNoteListQuery "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","$type":"GetNoteListQuery"}
+2023-07-25 14:14:54.424 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 14:14:54.438 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-07-25 14:14:54.443 +05:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-07-25 14:14:54.453 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 30.7369ms
+2023-07-25 14:14:54.453 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 14:14:54.461 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 200 - application/json;+charset=utf-8 48.5852ms
+2023-07-25 14:15:07.891 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:15:07.891 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:15:07.891 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:15:07.891 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:15:07.892 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 0.4456ms
+2023-07-25 14:15:07.892 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 0.4456ms
+2023-07-25 14:15:07.902 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:15:07.902 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:15:07.902 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 14:15:07.902 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 14:15:07.903 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 1.0894ms
+2023-07-25 14:15:07.906 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:15:07.907 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:15:07.908 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 14:15:07.908 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 14:15:07.911 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 4.0545ms
+2023-07-25 14:34:17.067 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:34:17.068 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:34:17.069 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 1.3746ms
+2023-07-25 14:34:17.069 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:34:17.073 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:34:17.079 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 5.2161ms
+2023-07-25 14:34:17.080 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:34:17.087 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:34:17.088 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 14:34:17.089 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 14:34:17.094 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 12.9569ms
+2023-07-25 14:34:17.108 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:34:17.109 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:34:17.109 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 14:34:17.110 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 14:34:17.112 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 2.9023ms
+2023-07-25 14:34:29.101 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:34:29.101 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:34:29.102 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:34:29.102 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:34:29.102 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 1.5340ms
+2023-07-25 14:34:29.102 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 1.5339ms
+2023-07-25 14:34:29.108 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:34:29.109 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:34:29.119 +05:00 [INF] Successfully validated the token.
+2023-07-25 14:34:29.119 +05:00 [INF] Authorization was successful.
+2023-07-25 14:34:29.120 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 14:34:29.120 +05:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 14:34:29.121 +05:00 [INF] Notes Request: GetNoteListQuery "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","$type":"GetNoteListQuery"}
+2023-07-25 14:34:29.122 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 14:34:29.153 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-07-25 14:34:29.159 +05:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-07-25 14:34:29.163 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 42.2336ms
+2023-07-25 14:34:29.163 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 14:34:29.164 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 200 - application/json;+charset=utf-8 56.0418ms
+2023-07-25 14:34:29.181 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:34:29.181 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:34:29.182 +05:00 [INF] Successfully validated the token.
+2023-07-25 14:34:29.183 +05:00 [INF] Authorization was successful.
+2023-07-25 14:34:29.183 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 14:34:29.183 +05:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 14:34:29.183 +05:00 [INF] Notes Request: GetNoteListQuery "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","$type":"GetNoteListQuery"}
+2023-07-25 14:34:29.186 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 14:34:29.198 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-07-25 14:34:29.200 +05:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-07-25 14:34:29.208 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 24.9013ms
+2023-07-25 14:34:29.208 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 14:34:29.214 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 200 - application/json;+charset=utf-8 32.8750ms
+2023-07-25 14:48:39.411 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:48:39.411 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:48:39.418 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 6.0003ms
+2023-07-25 14:48:39.422 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:48:39.422 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:48:39.422 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:48:39.423 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:48:39.423 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 0.5263ms
+2023-07-25 14:48:39.424 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 14:48:39.424 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 14:48:39.447 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 24.9958ms
+2023-07-25 14:48:39.449 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:48:39.449 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:48:39.452 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 14:48:39.452 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 14:48:39.454 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 8.2637ms
+2023-07-25 14:51:16.381 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:51:16.385 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:51:16.387 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:51:16.387 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:51:16.387 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 6.9040ms
+2023-07-25 14:51:16.387 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 1.7483ms
+2023-07-25 14:51:16.397 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:51:16.399 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:51:16.409 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 14:51:16.409 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 14:51:16.413 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 16.4356ms
+2023-07-25 14:51:16.418 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:51:16.420 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:51:16.428 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 14:51:16.428 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 14:51:16.434 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 16.6295ms
+2023-07-25 14:51:40.760 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:51:40.760 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:51:40.777 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 3.2245ms
+2023-07-25 14:51:40.777 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:51:40.777 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:51:40.777 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:51:40.778 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 1.0437ms
+2023-07-25 14:51:40.778 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:51:40.782 +05:00 [INF] Successfully validated the token.
+2023-07-25 14:51:40.788 +05:00 [INF] Authorization was successful.
+2023-07-25 14:51:40.788 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 14:51:40.788 +05:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 14:51:40.790 +05:00 [INF] Notes Request: GetNoteListQuery "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","$type":"GetNoteListQuery"}
+2023-07-25 14:51:40.792 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 14:51:40.803 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-07-25 14:51:40.808 +05:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-07-25 14:51:40.814 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 25.4038ms
+2023-07-25 14:51:40.814 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 14:51:40.820 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 200 - application/json;+charset=utf-8 43.3270ms
+2023-07-25 14:51:40.828 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 14:51:40.828 +05:00 [INF] CORS policy execution successful.
+2023-07-25 14:51:40.830 +05:00 [INF] Successfully validated the token.
+2023-07-25 14:51:40.831 +05:00 [INF] Authorization was successful.
+2023-07-25 14:51:40.831 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 14:51:40.833 +05:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 14:51:40.836 +05:00 [INF] Notes Request: GetNoteListQuery "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","$type":"GetNoteListQuery"}
+2023-07-25 14:51:40.844 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 14:51:40.855 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-07-25 14:51:40.859 +05:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-07-25 14:51:40.874 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 41.0132ms
+2023-07-25 14:51:40.875 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 14:51:40.878 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 200 - application/json;+charset=utf-8 50.3189ms
+2023-07-25 15:13:28.757 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 15:13:28.757 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 15:13:28.758 +05:00 [INF] CORS policy execution successful.
+2023-07-25 15:13:28.758 +05:00 [INF] CORS policy execution successful.
+2023-07-25 15:13:28.759 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 2.6309ms
+2023-07-25 15:13:28.759 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 2.6310ms
+2023-07-25 15:13:28.975 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 15:13:28.975 +05:00 [INF] CORS policy execution successful.
+2023-07-25 15:13:28.976 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 15:13:28.977 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 15:13:28.998 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 23.3188ms
+2023-07-25 15:13:29.092 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 15:13:29.092 +05:00 [INF] CORS policy execution successful.
+2023-07-25 15:13:29.092 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2023-07-25 15:13:29.093 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-25 15:13:29.126 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 401 - - 33.7758ms
+2023-07-25 15:13:40.067 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 15:13:40.067 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - -
+2023-07-25 15:13:40.070 +05:00 [INF] CORS policy execution successful.
+2023-07-25 15:13:40.073 +05:00 [INF] CORS policy execution successful.
+2023-07-25 15:13:40.073 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 5.3165ms
+2023-07-25 15:13:40.073 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44307/api/1.0/Note - - - 204 - - 6.4776ms
+2023-07-25 15:13:40.082 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 15:13:40.082 +05:00 [INF] CORS policy execution successful.
+2023-07-25 15:13:40.091 +05:00 [INF] Successfully validated the token.
+2023-07-25 15:13:40.092 +05:00 [INF] Authorization was successful.
+2023-07-25 15:13:40.092 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 15:13:40.092 +05:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 15:13:40.094 +05:00 [INF] Notes Request: GetNoteListQuery "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","$type":"GetNoteListQuery"}
+2023-07-25 15:13:40.099 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 15:13:40.111 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-07-25 15:13:40.115 +05:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-07-25 15:13:40.125 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 32.5839ms
+2023-07-25 15:13:40.125 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 15:13:40.126 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 200 - application/json;+charset=utf-8 44.6849ms
+2023-07-25 15:13:40.128 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44307/api/1.0/Note - -
+2023-07-25 15:13:40.129 +05:00 [INF] CORS policy execution successful.
+2023-07-25 15:13:40.130 +05:00 [INF] Successfully validated the token.
+2023-07-25 15:13:40.130 +05:00 [INF] Authorization was successful.
+2023-07-25 15:13:40.131 +05:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 15:13:40.131 +05:00 [INF] Route matched with {action = "GetAll", controller = "Note"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Notes.Application.Notes.Queries.GetNoteList.NoteListVm]] GetAll() on controller Notes.WebApi.Controllers.NoteController (Notes.WebApi).
+2023-07-25 15:13:40.132 +05:00 [INF] Notes Request: GetNoteListQuery "8974086b-e5d0-4557-b114-0ac167198fe4" {"UserId":"8974086b-e5d0-4557-b114-0ac167198fe4","$type":"GetNoteListQuery"}
+2023-07-25 15:13:40.132 +05:00 [INF] Entity Framework Core 5.0.5 initialized 'NotesDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2023-07-25 15:13:40.148 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__request_UserId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "n"."Id", "n"."Title"
+FROM "Notes" AS "n"
+WHERE "n"."UserId" = @__request_UserId_0
+2023-07-25 15:13:40.162 +05:00 [INF] Executing OkObjectResult, writing value of type 'Notes.Application.Notes.Queries.GetNoteList.NoteListVm'.
+2023-07-25 15:13:40.162 +05:00 [INF] Executed action Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi) in 30.8764ms
+2023-07-25 15:13:40.162 +05:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.NoteController.GetAll (Notes.WebApi)'
+2023-07-25 15:13:40.163 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44307/api/1.0/Note - - - 200 - application/json;+charset=utf-8 34.8424ms
